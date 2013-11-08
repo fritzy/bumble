@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -4245,7 +4246,7 @@ a.th {
     max-width: 800px; }
 
 body {
-  font: 17px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #323232; }
 
 h1 {
@@ -4292,8 +4293,10 @@ h3, h4, h5, h6 {
   font-weight: normal; }
 
 p {
+  margin-top: 1em;
   margin-bottom: 1em;
-  line-height: 130%; }
+  line-height: 120%;
+  font-size: 14px; }
   p a {
     text-decoration: underline; }
 
@@ -4301,11 +4304,11 @@ h2 {
   margin-top: 20px; }
 
 .permalink {
-  font-size: 12px;
+  font-size: 14px;
   display: block;
   margin-top: 10px;
-  text-align: right;
-  font-weight: 100; }
+  text-align: left;
+  font-weight: 150; }
 
 .date {
   text-align: right;
@@ -4343,8 +4346,8 @@ ul, ol {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 50%;
-  margin-left: 25%;
+  width: 83.33333%;
+  margin-left: 8.33333%;
   float: left; }
 
 .pageTitle h1 {
@@ -4356,23 +4359,38 @@ ul, ol {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 50%;
+  width: 83.33333%;
+  margin-left: 16.66667%;
   float: left; }
 
 .permalink {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 25%;
+  width: 16.66667%;
+  margin-left: 0%;
   float: left; }
 
 .postContent {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 50%;
-  margin-left: 25%;
+  width: 83.33333%;
+  margin-left: 16.66667%;
   float: left; }
+
+#disqus_thread {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 66.66667%;
+  margin-left: 16.66667%;
+  float: left;
+  background-color: #fafafa;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 #pagination {
   padding: 10px 0;

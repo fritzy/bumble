@@ -90,6 +90,7 @@ exports.blogIndex = function (req, res) {
 
 // rss
 exports.rss = function (req, res) {
+    logger.debug(postSetData);
     res.set('Content-Type', 'text/xml');
     res.render('rss', {
         postData: postSetData,

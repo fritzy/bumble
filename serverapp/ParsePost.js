@@ -24,7 +24,7 @@ var postDate, postSlug, postDateText;
 
 
 marked.setOptions({
-  breaks: true,
+  breaks: false,
   smartypants: true,
 });
 
@@ -61,14 +61,15 @@ ParsePosts.prototype.parseFile = function (file, callback) {
     // metadata should be saved in the form
     // # key: value
     function loadMetadata(file, filename) {
+
         var metadata = {};
         var post = [];
         var markdown_h1_re = /^#\s+(\w+.*)/;
         var front_matter = [];
-
         var in_metadata = false;
         var done = false;
         var lines = file.split(/\n|\r\n/);
+	logger.debug('loading file:', filename);
         lines.forEach(function (line) {
             if (done) {
                 post.push(line);
@@ -99,7 +100,7 @@ ParsePosts.prototype.parseFile = function (file, callback) {
             date: Date.create(metadata.date),
             slug: metadata.slug,
             blogTitle: config.blogTitle,
-            blogSubTitle: config.blogSubTitle,
+            blogSubTitle: config.blogSubtitle,
             author: metadata.author || config.blogAuthor,
             siteUrl: config.siteUrl,
             rssUrl: config.rssUrl
